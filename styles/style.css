@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Montserrat, sans-serif;
+  line-height: 1.6;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+h1,h2 {
+  font-weight: 700;
+  line-height: 0.9;
+  margin: 10px 0;
+}
+p {
+  margin: 20px 0;
+  font-size: 0.9em;
+  text-align: justify;
+}
+/* ==========================================================================
+                                    NAV STYLE 
+================================================================================ */
+.navbar {
+  background-color: #333;
+  color: #fff;
+  height: 70px;
+}
+
+.navbar ul {
+  display: flex;
+}
+.navbar a {
+  color: #fff;
+  padding: 10px;
+  margin: 0 5px;
+}
+.navbar .flex {
+  justify-content: space-between;
+}
+.navbar a:hover {
+  color: #a7a7a7;
+  border-bottom: 2px solid #fff;
+}
+.container-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  max-width: 100%;
+  min-width: fit-content;
+  margin: 0 auto;
+  overflow: visible;
+  padding: 0 20px;
+}
+.logo {
+  padding: 30px;
+}
+/* ==========================================================================
+                                    MAIN STYLE 
+================================================================================ */
+.main {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 60vw;
+  /* grid-auto-rows: 90vh; */
+
+}
+.main > div {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+/* ==========================================================================
+                                     LEFT SIDE STYLE 
+================================================================================ */
+.info {
+  position: relative;
+  padding: 50px 20px 10px 50px;/* top , right, buttom, left. its clockwise */
+}
+.icones {
+  display: flex;
+  gap: 55px;
+}
+.btn {
+  display: grid;
+  padding-top: 20px;
+  /* to shows the btn in a culomn in pc screen(deafult) already in main > div we set all sub dives in display flex */
+}
+.button1 {
+  background-color: #EE2B47;
+  border: none;
+  color: white;
+  width: 220px;
+  padding: 10px 0 10px 0;
+  margin-bottom: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+.button1:hover {
+  background-color: rgb(171, 29, 0);
+}
+.button2 {
+  background-color: #0C005A;
+  border: none;
+  color: white;
+  width: 220px;
+  padding: 10px 0 10px 0;
+  text-align: center;
+  text-decoration: none;
+}
+.button2:hover {
+  background-color: rgb(23, 0, 169)
+}
+/* ==========================================================================
+                                     RIGHT STYLE 
+================================================================================ */
+.container-right {
+  position: relative;
+}
+img {
+  width: 100%;
+  height: 100%;
+  transition: 4s ease-in-out 1s;
+  /* animation: zoom-in-zoom-out 3s ease-in-out ; */
+}
+img:hover {
+  transform: scale(1.2);
+  filter: brightness(130%);
+  /* will increase the brightness of the img will the mouse is hover on. */
+}
+/* @keyframes zoom-in-zoom-out {
+  
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.5, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+} */
+.project-number {
+  position: absolute;
+  /* parent position relative + child position absolute == text(project number) on top of the image */
+  padding: 50px;
+}
+.project-number a {
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+.project-number a:hover {
+  color: #000000;
+  text-shadow: #333 1px 1px 10px;
+  border-bottom: 3px solid #fff;
+}
+/* ==========================================================================
+                                    RESOPSIVE STYLE
+================================================================================ */
+@media screen and (max-width: 768px) {
+  /* header {
+    width: 100vw;
+  } */
+  .main {
+    grid-template-columns: 1fr;
+    
+  }
+  /* .cantact-me {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  } */
+  /* .btn {
+    display: flex;
+    align-items: center;      
+    justify-content: space-between;
+  } */
+}
+@media screen and (max-width: 320px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+  /* .cantact-me {
+    display: flex;
+    justify-content: space-between;
+  } */
+  /* .btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  } */
+  .project-number {
+    font-size: 12px;
+    }
+}
+
+
