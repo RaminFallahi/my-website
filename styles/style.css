@@ -70,7 +70,6 @@ p {
   display: grid;
   grid-template-columns: 1fr 60vw;
   /* grid-auto-rows: 90vh; */
-
 }
 .main > div {
   overflow: hidden;
