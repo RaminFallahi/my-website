@@ -1,102 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import "style-profile-card.css";
+
 * {
+  font-family: Montserrat, Arial, sans-serif;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
-body {
-  font-family: Montserrat, sans-serif;
-  line-height: 1.6;
-}
-ul {
-  list-style-type: none;
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
 }
 a {
+  color: white;
   text-decoration: none;
-  color: #333;
 }
-h1,h2 {
-  font-weight: 700;
-  line-height: 0.9;
-  margin: 10px 0;
+span {
+  display: flex;
+  color: #000000;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 2em;
+  padding: 0 0 2px 0;
 }
 p {
-  margin: 20px 0;
-  font-size: 0.9em;
+  padding: 10px 0;
   text-align: justify;
 }
-/* ==========================================================================
-                                    NAV STYLE 
-================================================================================ */
-.navbar {
-  background-color: #333;
-  color: #fff;
-  height: 70px;
-}
-
-.navbar ul {
+/* ==============================================================================================
+                                          NAVBAR
+================================================================================================= */
+nav {
+  height: 10vh;
+  background-color: #252525;
+  /* flex-direction: column; */
+  position: relative;
   display: flex;
 }
-.navbar a {
-  color: #fff;
-  padding: 10px;
-  margin: 0 5px;
-}
-.navbar .flex {
-  justify-content: space-between;
-}
-.navbar a:hover {
-  color: #a7a7a7;
-  border-bottom: 2px solid #fff;
-}
-.container-flex {
-  display: flex;
-  justify-content: space-between;
+.nav-container {
+  /* display: flex; */
+  justify-content: space-evenly;
   align-items: center;
-  height: 100%;
   max-width: 100%;
-  min-width: fit-content;
-  margin: 0 auto;
-  overflow: visible;
-  padding: 0 20px;
+  margin: 10px auto;
+  /* padding: 1.5em 2em; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+}
+.nav-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  margin-left: auto;
+  height: 100%;
+  font-size: 0.8em;
 }
 .logo {
-  padding: 30px;
-}
-/* ==========================================================================
-                                    MAIN STYLE 
-================================================================================ */
-.main {
-  min-height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 60vw;
-  /* grid-auto-rows: 90vh; */
-}
-.main > div {
-  overflow: hidden;
-  position: relative;
   display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: underline overline #ff3028;
+  align-items: center;
+  justify-content: left;
+  font-size: 1.5em;
+  padding: 0 0 0px 20px;
+  
 }
+/* .ramin-logo {
+  width: 100px;
+  object-fit: contain;
+  mix-blend-mode: color-burn;
+} */
+/* ==============================================================================================
+                                          left-column
+================================================================================================= */
 
-/* ==========================================================================
-                                     LEFT SIDE STYLE 
-================================================================================ */
-.info {
-  position: relative;
-  padding: 50px 20px 10px 50px;/* top , right, buttom, left. its clockwise */
+.left-column {
+  width: 40%;
+  padding: 20px 20px 20px 20px;
+  background-color: #f2f2f2;
+  /* margin-bottom: 20px; */
+  height: 90vh;
 }
-.icones {
-  display: flex;
-  gap: 55px;
+.info-box {
+  margin: 0 0 20% 0;
 }
-.btn {
-  display: grid;
-  padding-top: 20px;
-  /* to shows the btn in a culomn in pc screen(deafult) already in main > div we set all sub dives in display flex */
+.fa-github {
+  color: #000000;
+  font-size: 3rem;
 }
 .button1 {
-  background-color: #EE2B47;
+  background-color: #ee2b47;
   border: none;
   color: white;
   width: 220px;
@@ -109,7 +110,7 @@ p {
   background-color: rgb(171, 29, 0);
 }
 .button2 {
-  background-color: #0C005A;
+  background-color: #0c005a;
   border: none;
   color: white;
   width: 220px;
@@ -118,90 +119,110 @@ p {
   text-decoration: none;
 }
 .button2:hover {
-  background-color: rgb(23, 0, 169)
+  background-color: rgb(23, 0, 169);
 }
-/* ==========================================================================
-                                     RIGHT STYLE 
-================================================================================ */
-.container-right {
-  position: relative;
+/* ==============================================================================================
+                                          right-column
+================================================================================================= */
+.right-column {
+  width: 60%;
+  padding: 20px;
+  background-color: #f9f9f9;
+  /* margin-bottom: 20px; */
+  /* height: 80vh; */
 }
-img {
+/* .SHIRAZ-COCKTAIL-BAR {
   width: 100%;
-  height: 100%;
-  transition: 4s ease-in-out 1s;
-  /* animation: zoom-in-zoom-out 3s ease-in-out ; */
-}
-img:hover {
-  transform: scale(1.2);
-  filter: brightness(130%);
-  /* will increase the brightness of the img will the mouse is hover on. */
-}
-/* @keyframes zoom-in-zoom-out {
-  
-  0% {
-    transform: scale(1, 1);
-  }
-  50% {
-    transform: scale(1.5, 1.5);
-  }
-  100% {
-    transform: scale(1, 1);
-  }
+  object-fit: cover;
+  object-position: top left;
 } */
-.project-number {
-  position: absolute;
-  /* parent position relative + child position absolute == text(project number) on top of the image */
-  padding: 50px;
-}
-.project-number a {
+
+/* ==============================================================================================
+                                          footer
+================================================================================================= */
+.footer {
+  background-color: #333;
   color: #fff;
-  font-size: 1.2em;
-  font-weight: 500;
+  padding: 10px 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
-.project-number a:hover {
-  color: #000000;
-  text-shadow: #333 1px 1px 10px;
-  border-bottom: 3px solid #fff;
-}
-/* ==========================================================================
-                                    RESOPSIVE STYLE
-================================================================================ */
+/* ==============================================================================================
+                                          RESPONSIVENESS
+================================================================================================= */
 @media screen and (max-width: 768px) {
-  /* header {
+  .container {
+    flex-direction: column;
+  }
+  .left-column,
+  .right-column {
+    width: 100%;
+  }
+
+  .hamburger {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 3;
+  }
+
+  .line {
+    display: block;
+    height: 3px;
+    width: 20px;
+    margin: 4px;
+    border-radius: 3px;
+    background-color: white;
+  }
+
+  .nav-items {
+    position: fixed;
+    height: 100vh;
     width: 100vw;
-  } */
-  .main {
-    grid-template-columns: 1fr;
-    
+    background-color: #333;
+    flex-direction: column;
+    -webkit-clip-path: circle(1px at 85% -10%);
+    clip-path: circle(1px at 85% -10%);
+    transition: all 0.8s ease-out;
+    pointer-events: none;
+    z-index: 2;
   }
-  /* .cantact-me {
+  .nav-items.show {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-  } */
-  /* .btn {
-    display: flex;
-    align-items: center;      
-    justify-content: space-between;
+    -webkit-clip-path: circle(1000px at 85% -20%);
+    clip-path: circle(1000px at 85% -20%);
+    pointer-events: all;
+  }
+
+  a {
+    font-size: 25px;
+  }
+  .nav-item {
+    opacity: 0;
+  }
+
+  .nav-item:nth-child(1) {
+    transition: all 0.5s ease 0.2s;
+  }
+  .nav-item:nth-child(2) {
+    transition: all 0.5s ease 0.4s;
+  }
+  .nav-item:nth-child(3) {
+    transition: all 0.5s ease 0.6s;
+  }
+
+  .nav-item.fade {
+    opacity: 1;
+  }
+  /* p {
+    margin-top: 10.5vh;
+    transform: translateY(-50%);
+    text-align: center;
+    font-size: 30px;
+    font-family: Arial;
   } */
 }
-@media screen and (max-width: 320px) {
-  .main {
-    grid-template-columns: 1fr;
-  }
-  /* .cantact-me {
-    display: flex;
-    justify-content: space-between;
-  } */
-  /* .btn {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  } */
-  .project-number {
-    font-size: 12px;
-    }
-}
-
-
